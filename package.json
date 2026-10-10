@@ -1,0 +1,19 @@
+{
+  "name": "pharma-ebr",
+  "private": true,
+  "type": "module",
+  "description": "Fictional Pharma Electronic Batch Record (eBR) demo",
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "start": "npm install && npm run build && npm run serve",
+    "build": "npm run build -w client",
+    "serve": "tsx server/src/index.ts",
+    "demo": "tsx server/src/demo.ts",
+    "test": "tsx --test server/test/ebr.test.ts",
+    "typecheck": "tsc -p server --noEmit && tsc -p client --noEmit"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
